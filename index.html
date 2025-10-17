@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATYVA - Associação Terapêutica</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F8F9FA;
+            color: #2F4156;
+        }
+        .navbar {
+            background-color: #2F4156;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            font-weight: 600;
+            color: #9DAE8C !important;
+        }
+        .hero {
+            background: linear-gradient(135deg, #9DAE8C 0%, #2F4156 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: #9DAE8C;
+            border-color: #9DAE8C;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: 500;
+        }
+        .btn-primary:hover {
+            background-color: #8B9B7A;
+            border-color: #8B9B7A;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .step-icon {
+            font-size: 3rem;
+            color: #9DAE8C;
+            margin-bottom: 20px;
+        }
+        .testimonial {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background-color: #2F4156;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: #9DAE8C;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #8B9B7A;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="a-professional-corporate-logo-design-fea_EX3lPCI2SMOZomhTJVHpow_Zw9aQiiaQZ2Ldq14WrakJA.jpeg" alt="SATYVA Logo" style="height: 40px; margin-right: 10px;">SATYVA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="associe-se.html">Associe-se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Conectando pessoas ao tratamento terapêutico com cannabis.</h1>
+            <p data-aos="fade-up" data-aos-delay="200">A SATYVA é uma associação terapêutica que realiza a conexão entre pacientes e médicos especializados no tratamento com cannabis medicinal, oferecendo acolhimento, orientação e acompanhamento personalizado.</p>
+            <a href="#quem-somos" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Saiba mais</a>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 data-aos="fade-up">Quem Somos</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">A SATYVA é dedicada a promover o acesso responsável e informado ao tratamento com cannabis medicinal. Nossa missão é conectar pacientes com profissionais qualificados, garantindo um acompanhamento terapêutico personalizado e seguro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 data-aos="fade-up">Como Funciona</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body">
+                            <i class="bi bi-person-plus step-icon"></i>
+                            <h5 class="card-title">Cadastro do Paciente</h5>
+                            <p class="card-text">Realize seu cadastro conosco e compartilhe sua história médica para uma avaliação inicial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-body">
+                            <i class="bi bi-stethoscope step-icon"></i>
+                            <h5 class="card-title">Consulta Médica Especializada</h5>
+                            <p class="card-text">Agende uma consulta com nossos médicos especializados em cannabis medicinal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center" data-aos="fade-up" data-aos-delay="600">
+                        <div class="card-body">
+                            <i class="bi bi-heart step-icon"></i>
+                            <h5 class="card-title">Acompanhamento Terapêutico</h5>
+                            <p class="card-text">Receba acompanhamento contínuo para otimizar seu tratamento e bem-estar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 data-aos="fade-up">Depoimentos</h2>
+                </div>
+            </div>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial">
+                            <p>"A SATYVA mudou minha vida. Encontrei alívio através do tratamento com cannabis medicinal e o acompanhamento foi excepcional."</p>
+                            <cite>- Maria Silva</cite>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"Profissionais dedicados e um processo transparente. Recomendo a todos que precisam de alternativas terapêuticas."</p>
+                            <cite>- João Santos</cite>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"O suporte contínuo da SATYVA me deu confiança no meu tratamento. Sou grata por essa associação."</p>
+                            <cite>- Ana Costa</cite>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Associe-se -->
+    <section class="section bg-white">
+        <div class="container text-center">
+            <h2 data-aos="fade-up">Associe-se</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Junte-se à nossa comunidade e tenha acesso a tratamentos inovadores e acompanhamento especializado.</p>
+            <a href="contato.html" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Entre em Contato</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>SATYVA</h5>
+                    <p>Associação Terapêutica</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="associe-se.html">Associe-se</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contato</h5>
+                    <p>contato@satyva.org.br<br>
+                    Instagram: @satyva.associacao</p>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; 2023 SATYVA. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
