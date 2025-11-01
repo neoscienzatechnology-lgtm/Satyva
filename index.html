@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SATYVA - Associação Terapêutica</title>
-    <!-- Bootstrap 5 CSS -->
+    <title>SATYVA - Associação de Pacientes de Cannabis Medicinal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <!-- Google Fonts: Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #F8F9FA;
+            background-color: #FFFFFF;
             color: #2F4156;
+            padding-top: 76px;
         }
         .navbar {
             background-color: #2F4156;
@@ -26,26 +23,36 @@
             font-weight: 600;
             color: #9DAE8C !important;
         }
+        .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #9DAE8C !important;
+        }
         .hero {
-            background: linear-gradient(135deg, #9DAE8C 0%, #2F4156 100%);
+            background: linear-gradient(135deg, rgba(157, 174, 140, 0.9) 0%, rgba(47, 65, 86, 0.9) 100%), url('https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600') center/cover;
             color: white;
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .btn-primary {
             background-color: #9DAE8C;
             border-color: #9DAE8C;
             border-radius: 25px;
-            padding: 12px 30px;
+            padding: 12px 35px;
             font-weight: 500;
         }
         .btn-primary:hover {
@@ -55,26 +62,71 @@
         .section {
             padding: 80px 0;
         }
-        .card {
-            border: none;
+        .image-section {
+            background: url('https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1600') center/cover;
+            min-height: 300px;
+            position: relative;
+        }
+        .image-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(157, 174, 140, 0.3);
+        }
+        .carousel-item {
+            padding: 40px 20px;
+        }
+        .carousel-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fdf5 100%);
             border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            text-align: center;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid rgba(157, 174, 140, 0.2);
         }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .step-icon {
-            font-size: 3rem;
+        .carousel-card i {
+            font-size: 3.5rem;
             color: #9DAE8C;
             margin-bottom: 20px;
         }
-        .testimonial {
-            background-color: white;
+        .carousel-card h3 {
+            color: #2F4156;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        .info-box {
+            background: linear-gradient(to right, #f8fdf5, #ffffff);
             border-radius: 15px;
-            padding: 30px;
-            margin: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            border-left: 4px solid #9DAE8C;
+        }
+        .info-box h2 {
+            color: #2F4156;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .info-box p {
+            line-height: 1.8;
+            color: #555;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #2F4156 0%, #9DAE8C 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        .cta-section h2 {
+            font-weight: 600;
+            margin-bottom: 15px;
         }
         .footer {
             background-color: #2F4156;
@@ -89,32 +141,41 @@
         .footer a:hover {
             color: #8B9B7A;
         }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #2F4156;
+            border-radius: 50%;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="a-professional-corporate-logo-design-fea_EX3lPCI2SMOZomhTJVHpow_Zw9aQiiaQZ2Ldq14WrakJA.jpeg" alt="SATYVA Logo" style="height: 40px; margin-right: 10px;">SATYVA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html">
+                <img src="a-professional-corporate-logo-design-fea_EX3lPCI2SMOZomhTJVHpow_Zw9aQiiaQZ2Ldq14WrakJA.jpeg" alt="SATYVA Logo" style="height: 40px; margin-right: 10px;">
+                SATYVA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Satyva</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="noticias.html">Notícias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="associe-se.html">Associe-se</a>
+                        <a class="nav-link" href="institucional.html">Institucional</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="associe-se.html">Associar-se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#app-saty">App Saty</a>
                     </li>
                 </ul>
             </div>
@@ -124,111 +185,243 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 data-aos="fade-up">Conectando pessoas ao tratamento terapêutico com cannabis.</h1>
-            <p data-aos="fade-up" data-aos-delay="200">A SATYVA é uma associação terapêutica que realiza a conexão entre pacientes e médicos especializados no tratamento com cannabis medicinal, oferecendo acolhimento, orientação e acompanhamento personalizado.</p>
-            <a href="#quem-somos" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Saiba mais</a>
+            <h1 data-aos="fade-up">SATYVA</h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                SATYVA é uma Associação de Pacientes de Cannabis Medicinal com foco em terapias integrativas e ferramentas inteligentes na área da saúde.<br>
+                Nosso objetivo é que o paciente e seus tutores sintam-se seguros, e que o tratamento seja eficaz.
+            </p>
+            <a href="contato.html" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Entre em Contato</a>
         </div>
     </section>
 
-    <!-- Quem Somos -->
-    <section id="quem-somos" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 data-aos="fade-up">Quem Somos</h2>
-                    <p data-aos="fade-up" data-aos-delay="200">A SATYVA é dedicada a promover o acesso responsável e informado ao tratamento com cannabis medicinal. Nossa missão é conectar pacientes com profissionais qualificados, garantindo um acompanhamento terapêutico personalizado e seguro.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Como Funciona -->
+    <!-- Carrossel de Serviços -->
     <section class="section bg-white">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 data-aos="fade-up">Como Funciona</h2>
+            <h2 class="text-center mb-5" data-aos="fade-up">Nossos Serviços</h2>
+            <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="5"></button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-body">
-                            <i class="bi bi-person-plus step-icon"></i>
-                            <h5 class="card-title">Cadastro do Paciente</h5>
-                            <p class="card-text">Realize seu cadastro conosco e compartilhe sua história médica para uma avaliação inicial.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-body">
-                            <i class="bi bi-stethoscope step-icon"></i>
-                            <h5 class="card-title">Consulta Médica Especializada</h5>
-                            <p class="card-text">Agende uma consulta com nossos médicos especializados em cannabis medicinal.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card text-center" data-aos="fade-up" data-aos-delay="600">
-                        <div class="card-body">
-                            <i class="bi bi-heart step-icon"></i>
-                            <h5 class="card-title">Acompanhamento Terapêutico</h5>
-                            <p class="card-text">Receba acompanhamento contínuo para otimizar seu tratamento e bem-estar.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 data-aos="fade-up">Depoimentos</h2>
-                </div>
-            </div>
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="200">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="testimonial">
-                            <p>"A SATYVA mudou minha vida. Encontrei alívio através do tratamento com cannabis medicinal e o acompanhamento foi excepcional."</p>
-                            <cite>- Maria Silva</cite>
+                        <div class="carousel-card">
+                            <i class="bi bi-heart-pulse"></i>
+                            <h3>Acolhimento, Triagem, Encaminhamento</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="testimonial">
-                            <p>"Profissionais dedicados e um processo transparente. Recomendo a todos que precisam de alternativas terapêuticas."</p>
-                            <cite>- João Santos</cite>
+                        <div class="carousel-card">
+                            <i class="bi bi-capsule"></i>
+                            <h3>Acesso ao Medicamento</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="testimonial">
-                            <p>"O suporte contínuo da SATYVA me deu confiança no meu tratamento. Sou grata por essa associação."</p>
-                            <cite>- Ana Costa</cite>
+                        <div class="carousel-card">
+                            <i class="bi bi-clipboard-check"></i>
+                            <h3>Acompanhamento durante o Tratamento</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-card">
+                            <i class="bi bi-shield-check"></i>
+                            <h3>Plano de Saúde Integrativo</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-card">
+                            <i class="bi bi-people"></i>
+                            <h3>Conexão Médico-Paciente</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-card">
+                            <i class="bi bi-prescription2"></i>
+                            <h3>Medicamentos Magistrais</h3>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Associe-se -->
-    <section class="section bg-white">
-        <div class="container text-center">
-            <h2 data-aos="fade-up">Associe-se</h2>
-            <p data-aos="fade-up" data-aos-delay="200">Junte-se à nossa comunidade e tenha acesso a tratamentos inovadores e acompanhamento especializado.</p>
-            <a href="contato.html" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Entre em Contato</a>
+    <!-- Terapêutica -->
+    <section class="section cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Terapêutica Integrativa</h2>
+            <p data-aos="fade-up" data-aos-delay="200" style="max-width: 800px; margin: 0 auto 30px;">
+                A Terapêutica correta melhora a saúde total do paciente e aumenta a capacidade de ação dos canabinoides e demais compostos medicinais da Cannabis.
+            </p>
+            <a href="associe-se.html" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">ASSOCIE-SE</a>
+        </div>
+    </section>
+
+    <!-- Imagem Decorativa -->
+    <div class="image-section"></div>
+
+    <!-- Terapia Canabinoide -->
+    <section class="section" style="background: linear-gradient(to bottom, #f8fdf5, #ffffff);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800" alt="Cannabis Medicinal" class="img-fluid rounded shadow" style="border-radius: 15px;">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="info-box">
+                        <h2>Terapia Canabinoide</h2>
+                        <p>
+                            A terapia canabinoide é realizada através da administração de fitocompostos presentes na planta de "Cannabis Sativa", uma planta mestra domesticada e categorizada pelo ser humano há milênios. Seu cultivo espalhou-se no mundo e é estudada pela ciência ocidental moderna há quase um século. Vem ganhando espaço na medicina devido a seu potencial no tratamento de diversas doenças.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sistema Endocanabinoide -->
+    <section class="section" style="background: #ffffff;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800" alt="Sistema Endocanabinoide" class="img-fluid rounded shadow" style="border-radius: 15px;">
+                </div>
+                <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                    <div class="info-box">
+                        <h2>Sistema Endocanabinoide</h2>
+                        <p>
+                            As recentes descobertas da presença dos receptores CB1 e CB2 em todo o corpo dos mamíferos, além de compostos endógenos (produzidos pelo próprio corpo) semelhantes aos da cannabis, abriu um novo campo para o estudo do Sistema Endocanabinoide, que atua através de mecanismos de regulação e homeostase em outros sistemas, e da ação abrangente da cannabis sobre diversas condições de saúde e doença.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doenças Passíveis de Tratamento -->
+    <section class="section" style="background: linear-gradient(to bottom, #ffffff, #f8fdf5);">
+        <div class="container">
+            <div class="info-box" data-aos="fade-up">
+                <h2>Doenças Passíveis de Tratamento</h2>
+                <p>A cannabis medicinal tem demonstrado eficácia no tratamento de diversas condições de saúde:</p>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <ul style="line-height: 2;">
+                            <li><strong>Dor Crônica</strong> - Fibromialgia, artrite, neuropatias</li>
+                            <li><strong>Epilepsia</strong> - Síndromes epilépticas refratárias</li>
+                            <li><strong>Esclerose Múltipla</strong> - Espasticidade e dor</li>
+                            <li><strong>Parkinson</strong> - Tremores e rigidez muscular</li>
+                            <li><strong>Alzheimer</strong> - Sintomas comportamentais</li>
+                            <li><strong>Ansiedade e Depressão</strong> - Transtornos de humor</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul style="line-height: 2;">
+                            <li><strong>Autismo</strong> - Comportamentos repetitivos</li>
+                            <li><strong>Câncer</strong> - Náuseas, dor e perda de apetite</li>
+                            <li><strong>Glaucoma</strong> - Pressão intraocular</li>
+                            <li><strong>Insônia</strong> - Distúrbios do sono</li>
+                            <li><strong>TDAH</strong> - Déficit de atenção</li>
+                            <li><strong>Enxaqueca</strong> - Dores de cabeça crônicas</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mt-3"><em>Consulte sempre um médico especializado para avaliação individual.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações Técnicas -->
+    <section class="section" style="background: #ffffff;">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Informações Técnicas</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up">
+                    <div class="info-box">
+                        <h3><i class="bi bi-droplet-fill text-success me-2"></i>Extratos</h3>
+                        <p><strong>Full Spectrum:</strong> Contém todos os canabinoides, terpenos e flavonoides da planta.</p>
+                        <p><strong>Broad Spectrum:</strong> Todos os compostos exceto THC.</p>
+                        <p><strong>Isolados:</strong> CBD ou THC purificados.</p>
+                        <p><strong>Óleos:</strong> Diluídos em óleo de coco, oliva ou MCT.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-box">
+                        <h3><i class="bi bi-calculator text-success me-2"></i>Posologia</h3>
+                        <p>A dosagem é individualizada e deve ser ajustada gradualmente:</p>
+                        <p><strong>Início:</strong> Doses baixas (2,5-5mg)</p>
+                        <p><strong>Titulação:</strong> Aumento gradual a cada 3-7 dias</p>
+                        <p><strong>Manutenção:</strong> Dose mínima eficaz</p>
+                        <p><em>Sempre sob orientação médica.</em></p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-box">
+                        <h3><i class="bi bi-exclamation-triangle text-warning me-2"></i>Contra-indicações</h3>
+                        <p>• Gravidez e amamentação</p>
+                        <p>• Histórico de psicose</p>
+                        <p>• Alergia aos componentes</p>
+                        <p>• Insuficiência hepática grave</p>
+                        <p>• Menores de idade (exceto casos específicos)</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-box">
+                        <h3><i class="bi bi-capsule text-danger me-2"></i>Interações Medicamentosas</h3>
+                        <p>Pode interagir com:</p>
+                        <p>• Anticoagulantes (Varfarina)</p>
+                        <p>• Sedativos e ansiolíticos</p>
+                        <p>• Anticonvulsivantes</p>
+                        <p>• Antidepressivos</p>
+                        <p><em>Informe seu médico sobre todos os medicamentos em uso.</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-box" data-aos="fade-up" data-aos-delay="400">
+                <h3><i class="bi bi-info-circle text-info me-2"></i>Efeitos Adversos</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>Comuns (geralmente leves):</strong></p>
+                        <p>• Sonolência ou fadiga</p>
+                        <p>• Boca seca</p>
+                        <p>• Tontura</p>
+                        <p>• Alterações no apetite</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Menos comuns:</strong></p>
+                        <p>• Diarreia</p>
+                        <p>• Alterações de humor</p>
+                        <p>• Pressão arterial baixa</p>
+                        <p>• Alterações enzimas hepáticas</p>
+                    </div>
+                </div>
+                <p class="mt-3"><em>A maioria dos efeitos adversos é dose-dependente e reversível com ajuste da dosagem.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Saty -->
+    <section id="app-saty" class="section cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">App Saty</h2>
+            <p data-aos="fade-up" data-aos-delay="200" style="max-width: 800px; margin: 0 auto;">
+                Ferramentas inteligentes para acompanhamento do seu tratamento.
+            </p>
+            <p class="text-white-50 mt-3">Em breve</p>
         </div>
     </section>
 
@@ -238,16 +431,16 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5>SATYVA</h5>
-                    <p>Associação Terapêutica</p>
+                    <p>Associação de Pacientes de Cannabis Medicinal</p>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="noticias.html">Notícias</a></li>
-                        <li><a href="associe-se.html">Associe-se</a></li>
+                        <li><a href="index.html">Satyva</a></li>
+                        <li><a href="institucional.html">Institucional</a></li>
                         <li><a href="contato.html">Contato</a></li>
+                        <li><a href="associe-se.html">Associar-se</a></li>
+                        <li><a href="#app-saty">App Saty</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -257,16 +450,17 @@
                 </div>
             </div>
             <hr>
-            <p>&copy; 2023 SATYVA. Todos os direitos reservados.</p>
+            <p>&copy; 2024 SATYVA. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 </body>
 </html>

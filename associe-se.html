@@ -15,8 +15,9 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #F8F9FA;
+            background-color: #FFFFFF;
             color: #2F4156;
+            padding-top: 76px;
         }
         .navbar {
             background-color: #2F4156;
@@ -26,20 +27,32 @@
             font-weight: 600;
             color: #9DAE8C !important;
         }
+        .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #9DAE8C !important;
+        }
         .hero {
-            background: linear-gradient(135deg, #9DAE8C 0%, #2F4156 100%);
+            background: linear-gradient(135deg, rgba(157, 174, 140, 0.9) 0%, rgba(47, 65, 86, 0.9) 100%), url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1600') center/cover;
             color: white;
             padding: 80px 0;
             text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
         }
         .section {
             padding: 80px 0;
         }
         .membership-form {
-            background-color: white;
+            background: linear-gradient(to bottom, #f8fdf5, #ffffff);
             border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
             padding: 40px;
+            border-left: 4px solid #9DAE8C;
         }
         .form-control {
             border-radius: 10px;
@@ -61,10 +74,11 @@
             border-color: #8B9B7A;
         }
         .benefits-list {
-            background-color: white;
+            background: linear-gradient(to bottom, #ffffff, #f8fdf5);
             border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
             padding: 40px;
+            border-left: 4px solid #9DAE8C;
         }
         .benefit-item {
             display: flex;
@@ -102,19 +116,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Satyva</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="noticias.html">Notícias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="associe-se.html">Associe-se</a>
+                        <a class="nav-link" href="institucional.html">Institucional</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="associe-se.html">Associar-se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#app-saty">App Saty</a>
                     </li>
                 </ul>
             </div>
@@ -215,16 +229,16 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5>SATYVA</h5>
-                    <p>Associação Terapêutica</p>
+                    <p>Associação de Pacientes de Cannabis Medicinal</p>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Links Rápidos</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="noticias.html">Notícias</a></li>
-                        <li><a href="associe-se.html">Associe-se</a></li>
+                        <li><a href="index.html">Satyva</a></li>
+                        <li><a href="institucional.html">Institucional</a></li>
                         <li><a href="contato.html">Contato</a></li>
+                        <li><a href="associe-se.html">Associar-se</a></li>
+                        <li><a href="index.html#app-saty">App Saty</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -234,7 +248,7 @@
                 </div>
             </div>
             <hr>
-            <p>&copy; 2023 SATYVA. Todos os direitos reservados.</p>
+            <p>&copy; 2024 SATYVA. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -243,7 +257,10 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 </body>
 </html>
